@@ -6,6 +6,7 @@
 ### Hur använda?
 ```sh
 $ mkvirtualenv --python=/usr/bin/python3 visajobb
+$ git clone git@github.com:dunderrrrrr/visa_jobb.py.git
 $ pip install -r requirements.txt
 ```
 ```sh
