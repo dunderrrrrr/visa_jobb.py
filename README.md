@@ -1,6 +1,6 @@
 # visa_jobb.py
 ### Hur använda?
-  - Ett enkelt skript skrivet i Python som visar lediga jobb i hela länet.
+  - Ett enkelt skript skrivet i Python som visar lediga jobb i hela landet.
   - Använder Arbetsförmedlingens öppna API http://api.arbetsformedlingen.se.
 
 ### Hur använda?
