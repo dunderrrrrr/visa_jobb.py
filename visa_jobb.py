@@ -4,6 +4,12 @@ import requests
 from settings import settings, options
 from optparse import OptionParser
 
+def get_jobs(kid):
+    geturl = settings['url'] + "/platsannonser/matchning?kommunid=" + kid
+    r = requests.request("GET", geturl, headers=settings['headers'])
+    return(r.json()['matchningslista']['matchningdata'])
+    #r = requests.request("GET", geturl, headers=settings['headers'])
+
 def get_lans(laen):
     geturl = settings['url'] + "/platsannonser/soklista/lan"
     r = requests.request("GET", geturl, headers=settings['headers'])
@@ -55,7 +61,11 @@ if __name__ == '__main__':
                 data = get_kom(options.kom)
                 print(data['namn'], "(id: {})".format(data['id']))
                 print('Antal platsannonser: {}'.format(data['antal_platsannonser']))
-                print('Antal ledia jobb: {}'.format(data['antal_ledigajobb']))
+                print('Antal ledia jobb: {}\n===================='.format(data['antal_ledigajobb']))
+                jobs = get_jobs(data['id'])
+                for job in jobs:
+                    print("{}, {}\n{}\n{}\nURL: {}".format(job['publiceraddatum'], job['anstallningstyp'], job['yrkesbenamning'], job['arbetsplatsnamn'], job['annonsurl']))
+                    print("====================")
             except:
                 print("Kommunen du angav ({}) kunde inte hittas.".format(options.kom))
 

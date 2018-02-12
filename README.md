@@ -1,6 +1,5 @@
 # visa_jobb.py
 ### Hur använda?
-
   - Ett enkelt skript skrivet i Python som visar lediga jobb i hela länet.
   - Använder Arbetsförmedlingens öppna API http://api.arbetsformedlingen.se.
 
@@ -25,8 +24,25 @@ Options:
 ```sh
 $ python visa_jobb.py --kommun Stockholm
 Stockholm (id: 180)
-Antal platsannonser: 8623
-Antal ledia jobb: 17388
+Antal platsannonser: 8658
+Antal ledia jobb: 17443
+====================
+2018-02-12T00:00:00+01:00, Vanlig anställning
+Läkarsekreterare/Vårdadmin/Medicinsk sekreterare
+Karolinska Universitetssjukhuset
+URL: https://www.arbetsformedlingen.se/Tjanster/Arbetssokande/Platsbanken/annonser/7515021
+====================
+2018-02-12T00:00:00+01:00, Vanlig anställning
+Forskare, samhällsvetenskap
+Stockholms universitet
+URL: https://www.arbetsformedlingen.se/Tjanster/Arbetssokande/Platsbanken/annonser/7515346
+====================
+2018-02-12T00:00:00+01:00, Vanlig anställning
+Undersköterska, hemtjänst och äldreboende
+1:a Hemtjänstkompaniet
+URL: https://www.arbetsformedlingen.se/Tjanster/Arbetssokande/Platsbanken/annonser/7538410
+====================
+[...]
 ```
 #### Visa län
 ```sh
@@ -38,7 +54,7 @@ Antal ledia jobb: 17388
 #### Visa total
 ```sh
 $ python visa_jobb.py -t
-Totalt antal ledia jobb: 145957 
+Totalt antal ledia jobb: 145957
 Totalt antal platsannonser: 48155
 ```
 #### Visa alla kommuner
@@ -48,7 +64,7 @@ Karlshamn
 Karlskrona
 Olofström
 Ronneby
-...
+[...]
 ```
 #### Visa alla län
 ```sh
@@ -57,5 +73,5 @@ Blekinge län
 Dalarnas län
 Gotlands län
 Gävleborgs län
-...
+[...]
 ```
